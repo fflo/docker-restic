@@ -1,7 +1,7 @@
 # Build Phase
-FROM golang:1.13-alpine
+FROM golang:1.15-alpine
 
-ENV RESTIC_VERSION="0.9.6"
+ENV RESTIC_VERSION="0.11.0"
 
 # Install the items
 RUN apk update \
@@ -17,16 +17,16 @@ RUN apk update \
 
 
 # Release phase
-FROM golang:1.11-alpine
+FROM golang:1.15-alpine
 
 # Backup options
 ENV RESTIC_BACKUP_OPTIONS=""
 
 # Cleanup params
-ENV RESTIC_CLEANUP_KEEP_DAILY=7
-ENV RESTIC_CLEANUP_KEEP_WEEKLY=5
-ENV RESTIC_CLEANUP_KEEP_MONTHLY=12
-ENV RESTIC_CLEANUP_KEEP_YEARLY=75
+ENV RESTIC_CLEANUP_KEEP_DAILY=11
+ENV RESTIC_CLEANUP_KEEP_WEEKLY=6
+ENV RESTIC_CLEANUP_KEEP_MONTHLY=14
+ENV RESTIC_CLEANUP_KEEP_YEARLY=2
 ENV RESTIC_CLEANUP_OPTIONS="--prune"
 
 # Default interval times can be set in cron expression
