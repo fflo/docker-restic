@@ -1,6 +1,6 @@
 # docker-restic
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/oursource/restic.svg)](https://hub.docker.com/r/oursource/restic/) [![Docker layers](https://images.microbadger.com/badges/image/oursource/restic.svg)](https://microbadger.com/images/oursource/restic) [![Github Stars](https://img.shields.io/github/stars/our-source/restic.svg?label=github%20%E2%98%85)](https://github.com/our-source/restic/) [![Github Stars](https://img.shields.io/github/contributors/our-source/restic.svg)](https://github.com/our-source/restic/) [![Github Forks](https://img.shields.io/github/forks/our-source/restic.svg?label=github%20forks)](https://github.com/our-source/restic/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/fflo/docker-restic.svg)](https://hub.docker.com/r/fflo/restic/) [![Docker layers](https://images.microbadger.com/badges/image/fflo/docker-restic.svg)](https://microbadger.com/images/fflo/restic) [![Github Stars](https://img.shields.io/github/stars/fflo/docker-restic.svg?label=github%20%E2%98%85)](https://github.com/fflo/docker-restic/) [![Github Stars](https://img.shields.io/github/contributors/fflo/docker-restic.svg)](https://github.com/fflo/docker-restic/) [![Github Forks](https://img.shields.io/github/forks/fflo/docker-restic.svg?label=github%20forks)](https://github.com/fflo/docker-restic/)
 
 Restic is a fantastic backup tool. To wrap this in a usefull and flexible docker container there is this repo.
 
@@ -17,14 +17,14 @@ Includes:
 You can run restic command very like this:
 
 ```bash
-docker pull oursource/restic:latest
+docker pull fflo/restic:latest
 ```
 
 ```bash
 docker run --rm -e RESTIC_REPOSITORY="s3:https://s3.amazonaws.com/some-repo" \
                 -e AWS_ACCESS_KEY_ID="keyid" \
                 -e AWS_SECRET_ACCESS_KEY="topsecret" \
-                -e RESTIC_PASSWORD="some_good_hash" oursource/restic \
+                -e RESTIC_PASSWORD="some_good_hash" fflo/restic \
                 -v /:/data
                 restic snapshots
 ```
@@ -42,7 +42,7 @@ version: '2'
 services:
   restic:
     restart: always
-    image: oursource/restic:latest
+    image: fflo/restic:latest
     hostname: backup
     domainname: domain.com
     container_name: restic
@@ -72,7 +72,7 @@ version: '2'
 services:
   restic:
     restart: always
-    image: oursource/restic:latest
+    image: fflo/restic:latest
     hostname: backup
     domainname: domain.com
     container_name: restic
@@ -98,7 +98,7 @@ version: '2'
 services:
   restic:
     restart: always
-    image: oursource/restic:latest
+    image: fflo/restic:latest
     hostname: backup
     domainname: domain.com
     container_name: restic
@@ -135,7 +135,7 @@ A full explanation of the commands and options you can refer to the [manual](htt
 docker run --rm -e RESTIC_REPOSITORY="s3:https://s3.amazonaws.com/some-repo" \
                 -e AWS_ACCESS_KEY_ID="keyid" \
                 -e AWS_SECRET_ACCESS_KEY="topsecret" \
-                -e RESTIC_PASSWORD="some_good_hash" oursource/restic \
+                -e RESTIC_PASSWORD="some_good_hash" fflo/restic \
                 -v /:/data
                 restic init
 ```
@@ -147,7 +147,7 @@ docker run --rm -e RESTIC_REPOSITORY="s3:https://s3.amazonaws.com/some-repo" \
 docker run --rm -e RESTIC_REPOSITORY="s3:https://s3.amazonaws.com/some-repo" \
                 -e AWS_ACCESS_KEY_ID="keyid" \
                 -e AWS_SECRET_ACCESS_KEY="topsecret" \
-                -e RESTIC_PASSWORD="some_good_hash" oursource/restic \
+                -e RESTIC_PASSWORD="some_good_hash" fflo/restic \
                 -v /:/data
                 restic snapshots
 ```
@@ -160,7 +160,7 @@ docker run --rm -e RESTIC_REPOSITORY="s3:https://s3.amazonaws.com/some-repo" \
 docker run --rm -e RESTIC_REPOSITORY="s3:https://s3.amazonaws.com/some-repo" \
                 -e AWS_ACCESS_KEY_ID="keyid" \
                 -e AWS_SECRET_ACCESS_KEY="topsecret" \
-                -e RESTIC_PASSWORD="some_good_hash" oursource/restic \
+                -e RESTIC_PASSWORD="some_good_hash" fflo/restic \
                 -v /:/data
                 restic restore _id_ --target /data/restore_location
 ```
