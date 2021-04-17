@@ -1,6 +1,6 @@
 # docker-restic
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/fflo/docker-restic.svg)](https://hub.docker.com/r/fflo/restic/) [![Docker layers](https://images.microbadger.com/badges/image/fflo/docker-restic.svg)](https://microbadger.com/images/fflo/restic) [![Github Stars](https://img.shields.io/github/stars/fflo/docker-restic.svg?label=github%20%E2%98%85)](https://github.com/fflo/docker-restic/) [![Github Stars](https://img.shields.io/github/contributors/fflo/docker-restic.svg)](https://github.com/fflo/docker-restic/) [![Github Forks](https://img.shields.io/github/forks/fflo/docker-restic.svg?label=github%20forks)](https://github.com/fflo/docker-restic/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/fflo/restic.svg)](https://hub.docker.com/r/fflo/restic/) [![Docker layers](https://images.microbadger.com/badges/image/fflo/restic.svg)](https://microbadger.com/images/fflo/restic) [![Github Stars](https://img.shields.io/github/stars/fflo/docker-restic.svg?label=github%20%E2%98%85)](https://github.com/fflo/docker-restic/) [![Github Stars](https://img.shields.io/github/contributors/fflo/docker-restic.svg)](https://github.com/fflo/docker-restic/) [![Github Forks](https://img.shields.io/github/forks/fflo/docker-restic.svg?label=github%20forks)](https://github.com/fflo/docker-restic/)
 
 Restic is a fantastic backup tool. To wrap this in a usefull and flexible docker container there is this repo.
 
