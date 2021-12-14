@@ -2,10 +2,9 @@ name: buildx
 
 on:
   pull_request:
-    branches: master
+    branches: master, development
   push:
-    branches: master
-    tags:
+    branches: master, development
 
 jobs:
   buildx:
