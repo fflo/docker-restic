@@ -1,7 +1,7 @@
 # Build Phase
-FROM golang:1.16-alpine
+FROM golang:1.24-alpine
 
-ENV RESTIC_VERSION="0.12.1"
+ENV RESTIC_VERSION="0.17.3"
 
 # Install the items
 RUN apk update \
@@ -17,7 +17,7 @@ RUN apk update \
 
 
 # Release phase
-FROM golang:1.16-alpine
+FROM golang:1.24-alpine
 
 # Backup options
 ENV RESTIC_BACKUP_OPTIONS=""
